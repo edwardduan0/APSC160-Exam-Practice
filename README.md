@@ -7,7 +7,7 @@ What's going on? This was made with Git, a software that is used by programmers 
 
 **In a nutshell, The only important things you need to look at is `README.md` (what you're looking at now), `tips.md`, `debugging.md`, `MT2`, and `FE` where the `FE` has `C Programming`, and `Arduino Programming`.** The names are self explanatory, so have a look around!
 
-This guide is meant to serve as an additional resource to studying for APSC 160 Exams. Preferably, work your way up the problems, from _Warm Up/Easy_ to _Medium_ and then _Hard_. We also **strongly** recommend to check out `tips.md` too for additional advice! 
+This guide is meant to serve as an additional resource to studying for APSC 160 Exams. Preferably, work your way up the problems, from _Warm Up/Easy_ to _Medium_ and then _Hard_. We also **strongly** recommend to check out `tips.md` and `debugging.md` too for additional advice and insight! 
 
 Each folder contains only content up to that point that is relevant to that. So for ___ you should study:
 - MT2: MT2
@@ -115,9 +115,9 @@ In the `problem.md` file, there is a template to TinkerCAD. Complete the program
 
 If you find any mistakes/problems/suggestions in `C Programming` or `Arduino Programming` or issues with the repository/git/getting things running, email dchun924@student.ubc.ca
 
-Feel free to use Piazza to post questions related to solving the problems.
+Feel free to use Piazza to post questions related to solving the problems. Bonus points will be awarded to posting new, unique, innovative solutions to the problems.
 
-If you want additional tips/insights or anything else, email either/both of us!
+If you want additional tips/insights or anything else, email dchun924@student.ubc.ca
 
 ---
 
@@ -125,9 +125,9 @@ If you want additional tips/insights or anything else, email either/both of us!
 
 Updates to the repository can be found at `CHANGELOG.md`. Be sure to check there every now and then so you know whether to refresh the repository or not. I'll announce a Piazza statement if it's important too.
 
-- MT1 Problems (sorry 2025/2026 Term 2...)
+- MT1 Problems (sorry 2025/2026 Term 2... oopsy poopsy)
 - Make user I/O problems.
-- Get random/string problems from Aly's guide working. As of now, just use his guide on Canvas.
+- Get random/string problems from Aly's guide working. As of now, just use his guide on Canvas. (Only need for final exam)
 - Fix Alien Language to work on OnlineGDB.
 - Add comments to solutions.
 - Add problem credits & links.
