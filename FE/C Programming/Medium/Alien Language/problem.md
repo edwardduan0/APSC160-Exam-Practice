@@ -4,8 +4,6 @@
 
 **Topics:** File I/O, Strings, Characters, Encoding
 
-> Note: This problem seems to not work on OnlineGDB for now. Updates coming soon.
-
 ## Description
 
 You want to communicate with aliens. They speak a special language though that requires advanced decoding.
@@ -27,7 +25,7 @@ Take an input from the user (the sentence you want to translate), and write it t
 	2. The encoded sentence.
 
 ## ASCII Table
-![ASCII_table](../../../img/ascii.gif "ASCII_table")
+![ASCII_table](../../../../img/ascii.gif "ASCII_table")
 
 ## How to test
 
