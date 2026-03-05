@@ -97,4 +97,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - debugging.md
 
+## [2.1.1] - 2026-03-04
+
+### Changed
+- All testing files from .c to .h
+- OnlineGDB and Git Demo Gifs to be updated
+
  
