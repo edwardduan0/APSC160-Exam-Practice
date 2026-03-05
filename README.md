@@ -83,13 +83,18 @@ In the `problem.md` file, there is a template to TinkerCAD. Complete the program
 
 ## Topics Covered
 
+### MT2:
 - **C Programming**
     - Fundamentals
-    - User I/O [NO PROBLEMS]
+    - ~~User I/O~~ [NO PROBLEMS]
     - File I/O
     - Control
     - Functions
     - Arrays (1D & 2D)
+
+### FE:
+- **C Programming**
+    - All of MT2 Content
     - Strings
     - Random Numbers
 - **Arduino Programming**
@@ -99,8 +104,6 @@ In the `problem.md` file, there is a template to TinkerCAD. Complete the program
     - Random Numbers
     - Timing
     - Advanced Timing  
-
-> Note that the `C Programming` repository/folder includes Part 1 and Part 2 C content
 
 ## Authors
 
