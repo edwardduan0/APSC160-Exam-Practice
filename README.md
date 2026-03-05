@@ -57,7 +57,7 @@ Now open the folder in your IDE and run from there!
 
 > I use Visual Studio Code (VSCode) but feel free to use whatever IDE you'd like! https://code.visualstudio.com/docs/languages/cpp (C/C++ both work the same)
 
-![onlineGDB Demo](img/git_demo.gif "onlineGDB Demo")
+![Git Demo](img/git_demo.gif "Git Demo")
 
 #### What happens if changes are made by us (and hopefully announced on Piazza)?
 
