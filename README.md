@@ -132,4 +132,3 @@ Updates to the repository can be found at `CHANGELOG.md`. Be sure to check there
 - Make user I/O problems.
 - Get random/string problems from Aly's guide working. As of now, just use his guide on Canvas. (Only need for final exam)
 - Add comments to solutions.
-- Add problem credits & links.
