@@ -103,4 +103,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - All testing files from .c to .h
 - OnlineGDB and Git Demo Gifs to be updated
 
+## [2.1.2] - 2026-03-07
+
+### Added
+- Credits for problems
+
  
