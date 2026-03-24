@@ -1,4 +1,4 @@
-# 🔴 Unique License Plate Generator
+# 🔴 License Plate Generator
 
 **Recommended Time:** 20 - 45 min
 
