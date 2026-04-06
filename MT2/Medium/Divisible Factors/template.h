@@ -18,5 +18,33 @@ int divisible_factors(int n, int d, int output_array[]);
  * @return The size of output_array
  */
 int divisible_factors(int n, int d, int output_array[]) {
-    // TODO: Implement this function
+    FILE* outputFile = fopen(fileName, "w");
+
+    if (outputFile == NULL) return -1;
+
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            fprintf(outputFile, "%d ", i);
+        }
+    }
+
+    fclose(outputFile);
+
+
+
+    int value;
+    int index = 0;
+    FILE* inputFile = fopen(fileName, "r");
+
+    if (inputFile == NULL) return -1;
+
+    while (fscanf(inputFile, "%d", &value) == 1) {
+        if (value % d == 0) {
+            output_array[index] = value;
+            index++;
+        }
+    }
+    
+    fclose(inputFile);
+    return index;
 }
