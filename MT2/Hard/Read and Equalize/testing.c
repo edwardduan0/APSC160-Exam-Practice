@@ -3,6 +3,7 @@
 
 // DO NOT TOUCH ANYTHING BELOW THIS LINE
 #include <stdio.h>
+#include <string.h>
 
 #define test1File "test1.txt"
 #define test2File "test2.txt"
@@ -10,18 +11,56 @@
 #define test4File "test4.txt"
 #define test5File "test5.txt"
 #define test6File "test6.txt"
-#define test7File "gibblygobblygoo.txt"
+#define test7File "__definitely_missing_file__.txt"
+
+static void resolveTestFilePath(const char* fileName, char resolvedPath[260]) {
+    const char* prefixes[] = {
+        "",
+        "./",
+        "../",
+        "../../",
+        "../../../"
+    };
+    int prefixCount = (int)(sizeof(prefixes) / sizeof(prefixes[0]));
+
+    for (int i = 0; i < prefixCount; i++) {
+        snprintf(resolvedPath, 260, "%s%s", prefixes[i], fileName);
+        FILE* fileCheck = fopen(resolvedPath, "r");
+        if (fileCheck != NULL) {
+            fclose(fileCheck);
+            return;
+        }
+    }
+
+    snprintf(resolvedPath, 260, "%s", fileName);
+}
 
 int main() {
     printf("Running Read and Equalize Test Cases...\n");
     printf("====================================================\n\n");
+
+    char test1Path[260];
+    char test2Path[260];
+    char test3Path[260];
+    char test4Path[260];
+    char test5Path[260];
+    char test6Path[260];
+    char test7Path[260];
+
+    resolveTestFilePath(test1File, test1Path);
+    resolveTestFilePath(test2File, test2Path);
+    resolveTestFilePath(test3File, test3Path);
+    resolveTestFilePath(test4File, test4Path);
+    resolveTestFilePath(test5File, test5Path);
+    resolveTestFilePath(test6File, test6Path);
+    resolveTestFilePath(test7File, test7Path);
     
     int totalTests = 0;
     int passedTests = 0;
 
     // --- Test Case 1: Example 1 (Even) ---
     totalTests++;
-    int attempt1 = readAndEqualize(test1File, 5, 50); // 50 is even
+    int attempt1 = readAndEqualize(test1Path, 5, 50); // 50 is even
     int answer1 = 3; // Array: [4, 3, 8, 6, 6]. Mode is 6. Remove 3.
     
     if (attempt1 == answer1) { 
@@ -36,7 +75,7 @@ int main() {
 
     // --- Test Case 2: Test 1 (Odd) ---
     totalTests++;
-    int attempt2 = readAndEqualize(test1File, 5, 51); // 51 is odd
+    int attempt2 = readAndEqualize(test1Path, 5, 51); // 51 is odd
     int answer2 = 2; // Array: [1, 1, 4, 1, 11]. Mode is 1. Remove 2.
     
     if (attempt2 == answer2) { 
@@ -51,7 +90,7 @@ int main() {
 
     // --- Test Case 3: All Equal ---
     totalTests++;
-    int attempt3 = readAndEqualize(test2File, 3, 2); // 2 is even
+    int attempt3 = readAndEqualize(test2Path, 3, 2); // 2 is even
     int answer3 = 0; // Array: [7, 7, 7]. Mode is 7. Remove 0.
     
     if (attempt3 == answer3) { 
@@ -66,7 +105,7 @@ int main() {
 
     // --- Test Case 4: All Different ---
     totalTests++;
-    int attempt4 = readAndEqualize(test3File, 3, 3); // 3 is odd
+    int attempt4 = readAndEqualize(test3Path, 3, 3); // 3 is odd
     int answer4 = 2; // Array: [1, 3, 5]. Mode is 1. Remove 2.
     
     if (attempt4 == answer4) { 
@@ -81,7 +120,7 @@ int main() {
 
     // --- Test Case 5: Tie for Mode ---
     totalTests++;
-    int attempt5 = readAndEqualize(test4File, 4, 2); // 2 is even
+    int attempt5 = readAndEqualize(test4Path, 4, 2); // 2 is even
     int answer5 = 2; // Array: [10, 20, 10, 20]. Mode is 10. Remove 2.
     
     if (attempt5 == answer5) { 
@@ -96,7 +135,7 @@ int main() {
 
     // --- Test Case 6: Single Row ---
     totalTests++;
-    int attempt6 = readAndEqualize(test5File, 1, 1); // 1 is odd
+    int attempt6 = readAndEqualize(test5Path, 1, 1); // 1 is odd
     int answer6 = 0; // Array: [99]. Mode is 99. Remove 0.
     
     if (attempt6 == answer6) { 
@@ -111,7 +150,7 @@ int main() {
     
     // --- Test Case 7: Empty File ---
     totalTests++;
-    int attempt7 = readAndEqualize(test6File, 0, 2); // 2 is even
+    int attempt7 = readAndEqualize(test6Path, 0, 2); // 2 is even
     int answer7 = 0; // Array: []. Size 0. Returns 0.
     
     if (attempt7 == answer7) { 
@@ -126,7 +165,7 @@ int main() {
 
     // --- Test Case 8: No File Found---
     totalTests++;
-    int attempt8 = readAndEqualize(test7File, 67, 67); 
+    int attempt8 = readAndEqualize(test7Path, 67, 67); 
     int answer8 = -1;
     
     if (attempt8 == answer8) { 
@@ -143,11 +182,3 @@ int main() {
     printf("====================================================\n");
     return 0;
 }
-
-//Helper method (if you use these make sure to include the prototype at the top):
-
-/*
-int calculateMode(int nums[], int numsSize) { 
-    // TODO: Implement this method
-}
-*/
