@@ -42,7 +42,7 @@ Output: [[1,1],[1,1]]
 ## Hints:
 - I would strongly recommend making helper functions. Here are the ones I used:
     - `copyBoard`: Copies a matrix to another matrix
-    - `getLiveNeighbours`: Gets the number of live neighbors next to the current cell
+    - `getLiveNeighbors`: Gets the number of live neighbors next to the current cell
     - `liveCellNextState`: Determines the next state of a live cell based on the number of alive neighbors
     - `deadCellNextState`: Determines the next state of a dead cell based on the number of alive neighbors
 - Remember that the new states of cells are based on the original states of cells. (e.g. if you change a cell, then iterate, you should not be looking at the new, updated value, you should be looking at the original value)
