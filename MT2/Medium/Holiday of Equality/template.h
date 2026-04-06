@@ -14,5 +14,14 @@ int minimumBurlesToSpend(int[], int);
  * @return The minimum number of burles to spend to equalize welfare
  */
 int minimumBurlesToSpend(int citizens[], int citizensSize) {
-	// TODO: Implement this method
+	int greatestWealth = -1;
+	for (int i = 0; i < citizensSize; i++) {
+		if (citizens[i] > greatestWealth) greatestWealth = citizens[i];
+	}
+
+	int total = 0;
+	for (int i = 0; i < citizensSize; i++) {
+		total += greatestWealth - citizens[i];
+	}
+	return total;
 }
