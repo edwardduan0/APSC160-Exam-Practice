@@ -5,7 +5,9 @@
  */
 
 #include <stdio.h>
+
 int readAndEqualize(char fileName[], int fileRows, int evenOrOdd);
+int calculateModeValue(int nums[], int numsSize);
 
 /**
  * @brief Read values from file and calculate minimum removals needed for equalization
@@ -15,5 +17,35 @@ int readAndEqualize(char fileName[], int fileRows, int evenOrOdd);
  * @return The minimum number of values to remove to equalize the array
  */
 int readAndEqualize(char fileName[], int fileRows, int evenOrOdd) {
-    // TODO: Implement this method
+    FILE* inFile = fopen(fileName, "r");
+    if (inFile == NULL) return -1;
+
+    int nums[fileRows];
+    int i = 0;
+
+    if (evenOrOdd % 2) {
+        while (fscanf(inFile, "%d %*d", &nums[i]) == 1) i++;
+    } else {
+        while (fscanf(inFile, "%*d %d", &nums[i]) == 1) i++;
+    }
+
+    fclose(inFile);
+
+    return fileRows - calculateModeValue(nums, fileRows);
+    
+}
+
+int calculateModeValue(int nums[], int numsSize) {
+    int greatestModeValue = 0;
+    for (int i = 0; i < numsSize; i++) {
+        int currentValue = nums[i];
+        int currentValueCount = 0;
+
+        for (int j = 0; j < numsSize; j++) {
+            if (nums[j] == currentValue) currentValueCount++;
+        }
+            
+        if (currentValueCount > greatestModeValue) greatestModeValue = currentValueCount;
+    }
+    return greatestModeValue;
 }
