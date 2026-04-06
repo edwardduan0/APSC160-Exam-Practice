@@ -15,5 +15,10 @@ int twoSum(int[], int, int);
  * @return The sum of indices where nums[i] + nums[j] == target, or -1 if not found
  */
 int twoSum (int nums[], int numsSize, int target) {
-    // TODO: Implement this method
+    for (int i = 0; i < numsSize; i++) {
+        for (int j = i+1; j < numsSize; j++) {
+            if (nums[i] + nums[j] == target) return i + j;
+        }
+    }
+    return -1;
 }
