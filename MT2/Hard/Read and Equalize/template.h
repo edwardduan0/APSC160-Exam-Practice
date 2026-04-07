@@ -5,6 +5,7 @@
  */
 
 #include <stdio.h>
+
 int readAndEqualize(char fileName[], int fileRows, int evenOrOdd);
 
 /**

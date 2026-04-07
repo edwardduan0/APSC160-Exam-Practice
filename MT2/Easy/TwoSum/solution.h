@@ -5,6 +5,7 @@
  */
 
 #include <stdio.h>
+
 int twoSum(int[], int, int);
 
 /**

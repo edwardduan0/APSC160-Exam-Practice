@@ -4,7 +4,7 @@
  * @author Daylen Chun
  */
 
-#include <math.h> // Contains fmax and fmin
+#include <math.h> // Contains fmax(double num1, double num2) and fmin (double num1, double num2)
 
 int containerWithMaxWater(int heights[], int heightSize);
 
