@@ -1,0 +1,4 @@
+Enter a single lowercase word (max 50 characters): 
+Original string: a
+Applying Mutation: Uppercase Random Character
+Mutated string: A
