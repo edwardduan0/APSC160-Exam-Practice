@@ -1,7 +1,7 @@
 /**
  * @file solution.h
  * @brief Hidden Word in Noise Solution
- * @author Daylen Chun
+ * @author Aly Khan Nuruddin
  */
 #include <stdio.h>
 #include <stdlib.h>
