@@ -1,18 +1,24 @@
-#include <stdbool.h>
+/**
+ * @file solution.h
+ * @brief Is Palindrome Solution
+ * @author Daylen Chun
+ */
+
 #include <string.h>
 
-bool isPalindrome(char word[]);
+int isPalindrome(char word[]);
 
 /**
- * Checks if a given word is a palindrome.
- * @param word The input string to check.
- * @returns true if the word is a palindrome, false otherwise.
+ * @brief Check if a given word is a palindrome
+ * @param[in] word       The input string to check
+ * @return 1 if the word is a palindrome, 0 otherwise
  */
-bool isPalindrome(char word[]) {
-    bool isPalin = true;
-    for (int i = 0; i < strlen(word) / 2; i++) {
-        if (word[i] != word[strlen(word) - 1 - i]) {
-            isPalin = false;
+int isPalindrome(char word[]) {
+    int isPalin = 1;
+    size_t wordLength = strlen(word);
+    for (size_t i = 0; i < wordLength / 2; i++) {
+        if (word[i] != word[wordLength - 1 - i]) {
+            isPalin = 0;
         }
     }
     return isPalin;
