@@ -86,7 +86,7 @@ In the `problem.md` file, there is a template to TinkerCAD. Complete the program
 ### MT2:
 - **C Programming**
     - Fundamentals
-    - ~~User I/O~~ [NO PROBLEMS]
+    - User I/O
     - File I/O
     - Control
     - Functions
@@ -116,11 +116,9 @@ In the `problem.md` file, there is a template to TinkerCAD. Complete the program
 
 ## Inquiries
 
-If you find any mistakes/problems/suggestions in `C Programming` or `Arduino Programming` or issues with the repository/git/getting things running, email dchun924@student.ubc.ca
+If you find any mistakes/problems/suggestions in any directory or issues with the repository/git/getting things working, email dchun924@student.ubc.ca
 
 Feel free to use Piazza to post questions related to solving the problems. Bonus points will be awarded to posting new, unique, innovative solutions to the problems.
-
-If you want additional tips/insights or anything else, email dchun924@student.ubc.ca
 
 ---
 
