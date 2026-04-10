@@ -17,7 +17,7 @@ int richestCustomerWealth(int NUMROWS, int NUMCOLS, int accounts[][NUMCOLS]) {
     int wealth[NUMROWS];
     int richestIndex = 0;
     for (int i = 0; i < NUMROWS; i++){
-        wealth[i] = 0;
+        wealth[i] = 0; // RESET GARBAGE VALUES
         for (int j = 0; j < NUMCOLS; j++){
             wealth[i] += accounts[i][j];
         }

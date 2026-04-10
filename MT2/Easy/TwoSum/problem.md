@@ -22,23 +22,23 @@ Given an array of integers `nums` and an integer `target`, return the sum of the
 
 ```text
 Input: [2, 7, 11, 15], 4, 9
-Output: 1
+Output: 1 (0+1 = 1)
 Explanation: nums[0] + nums[1] == 9, so we return 0 + 1 = 1.
 ```
 
 ```text
 Input: [3, 2, 4], 3, 6
-Output: 3
+Output: 3 (1 + 2 = 3)
 ```
 
 ```text
 Input: [3, 3], 2, 6
-Output: 1
+Output: 1 (0 + 1 = 1)
 ```
 
 ```text
 Input: [1, 2, 3, 4], 4, 10
-Output: -1
+Output: -1 (Not possible to add array elements to get target)
 ```
 
 ## Credits
