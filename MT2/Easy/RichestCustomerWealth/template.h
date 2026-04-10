@@ -14,5 +14,18 @@ int richestCustomerWealth(int NUMROWS, int NUMCOLS, int accounts[][NUMCOLS]);
  * @return The maximum wealth among all customers
  */
 int richestCustomerWealth(int NUMROWS, int NUMCOLS, int accounts[][NUMCOLS]) {
-    // TODO: Implement this method
+    int wealth[NUMROWS];
+    int richestIndex = 0;
+    for (int i = 0; i < NUMROWS; i++){
+        wealth[i] = 0;
+        for (int j = 0; j < NUMCOLS; j++){
+            wealth[i] += accounts[i][j];
+        }
+    }
+    for (int i = 0; i < NUMROWS; i++){
+        if (wealth[i+1] > wealth[i] && wealth[i+1] > wealth[richestIndex] && i+1 < NUMROWS){
+            richestIndex = i+1;
+        }
+    }
+    return(wealth[richestIndex]);
 }

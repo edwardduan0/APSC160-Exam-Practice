@@ -4,6 +4,7 @@
  * @author Daylen Chun
  */
 
+
 int calculateSum(int nums[], int numsSize);
 double calculateAverage(int nums[], int numsSize);
 int calculateAboveOrEqualsAverage(int nums[], int numsSize);
@@ -14,8 +15,13 @@ int calculateAboveOrEqualsAverage(int nums[], int numsSize);
  * @param[in] numsSize   Size of the array
  * @return The sum of all integers in the array
  */
+
 int calculateSum(int nums[], int numsSize) {
-    // TODO: Implement this function
+    int sum = 0;
+    for (int i = 0; i < numsSize; i++){
+        sum += nums[i];
+    }
+    return(sum);
 }
 
 /**
@@ -25,7 +31,12 @@ int calculateSum(int nums[], int numsSize) {
  * @return The average of all integers in the array
  */
 double calculateAverage(int nums[], int numsSize) {
-    // TODO: Implement this function
+    double average = 0.0;
+    for (int i = 0; i < numsSize; i++){
+        average += nums[i];
+    }
+    average = average/numsSize;
+    return(average);
 }
 
 /**
@@ -35,5 +46,16 @@ double calculateAverage(int nums[], int numsSize) {
  * @return The number of elements greater than or equal to the average
  */
 int calculateAboveOrEqualsAverage(int nums[], int numsSize) {
-    // TODO: Implement this function
+    int count = 0;
+    double average = 0.0;
+    for (int i = 0; i < numsSize; i++){
+        average += nums[i];
+    }
+    average = average/numsSize;
+    for (int i = 0; i < numsSize; i++){
+        if (nums[i] >= average){
+            count++;
+        }
+    }
+    return(count);
 }
