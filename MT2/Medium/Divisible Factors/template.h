@@ -20,5 +20,20 @@ int divisible_factors(int n, int d, int output_array[]);
  * @return The size of output_array
  */
 int divisible_factors(int n, int d, int output_array[]) {
-    // TODO: Implement this function
+    FILE* inFile; 
+    inFile = fopen(fileName, "w");
+    int i = 1;
+    int count = 0;
+    for (i; i <= n; i++){
+        if (n % i == 0){
+            fprintf(inFile, "%d ", i);
+            if (i % d == 0){ 
+                output_array[count] = i;
+                count++;
+            }
+        }
+        
+    }
+    fclose(inFile);
+    return(count);
 }
