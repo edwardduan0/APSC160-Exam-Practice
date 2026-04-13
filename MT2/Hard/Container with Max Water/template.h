@@ -15,5 +15,15 @@ int containerWithMaxWater(int heights[], int heightSize);
  * @return The maximum water that can be contained by two heights
  */
 int containerWithMaxWater(int height[], int heightSize) {
-    // TODO: Implement this function
+    int area;
+    int max = 0;
+    for (int i = 0; i < heightSize - 1; i++){
+        for (int j = i + 1; j < heightSize; j++){
+            area = fmin(height[i], height[j]) * (j-i);
+            if (area > max){
+                max = area;
+            }
+        }
+    }
+    return(max);
 }
